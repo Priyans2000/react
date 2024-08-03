@@ -1,0 +1,147 @@
+// import { useState } from "react";
+// import Comp1 from "./component/comp1";
+// import './m.css'
+// const App=()=>{
+//   const [user,setuser]= useState("priyansh")
+//   return(
+//     <>
+//     <h1> welcome : {user} </h1>
+//     <Comp1 user={user}/>
+//     </>
+//   )
+// }
+// export default App;
+// ====================================
+// import { useContext } from "react";
+// import{ myloginContext}
+// import Auth from "./Auth";
+// import Unauth from "./unauth";
+// constApp=()=>{
+//   const {user}=useContext{myloginContext}
+//   return(<>
+  
+//   <h1> my login page</h1>
+//   {User.auth ?<Auth/>:<Unauth/>}
+//   </>)
+// }
+// export default App;
+// ========================================
+
+// const App=()=>{
+//   return(<>
+//   <h1>pro</h1>
+//   </>)
+// }
+// export default App;
+// ============================create contaxt============================
+// import { createContext } from "react";
+// import Bhopal from "./bhopal";
+
+
+// const CourseContext=createContext();
+// const App=()=>
+// {
+//   const {course,setCourse}=useContext(myContext)
+
+//   return(<>
+// <h1>Welcome to cybrom :{course}</h1>
+// <button onClick={()=>{setCourse(bca)}} > click here</button>
+// <CourseContext.Provider value={{course,setCourse}}>
+// <Bhopal/>
+// </CourseContext.Provider>
+//   </>)
+// }
+// export default App;
+// export{CourseContext}
+
+// ====================================================
+
+
+
+
+// import { useSelector,useDispatch } from "react-redux";
+// import { mydic,myinc } from "./cslice";
+
+
+
+// const App=()=>{
+//     const counter=useSelector((State)=>State.mycounter.cnt)
+//     const mydis=useDispatch();
+//     return(
+//     <>
+//     <h1>my counter</h1>
+// <button onClick={()=>{mydis(myinc())}}> inc</button>
+// <h1>{counter}</h1>
+// <button onClick={()=>{mydis(mydic())}}>dic</button>
+//     </>
+//     )
+// }
+// export default App;
+
+
+
+
+//==============================================
+
+// import { useDispatch, useSelector } from "react-redux";
+// import { changeColor } from "./cslice";
+// import { useState } from "react";
+// const App=()=>{
+//     const myclr=useSelector((state)=>state.mycolor.bgcolor)
+//     const mydis=useDispatch()
+//     const [clr,setClr]=useState("");
+//     return(<>
+
+
+//     <h1>welcome</h1>
+//     Enter your color:<input type="text" value={clr}
+//     onChange={(e)=>setClr(e.target.value)}/>
+//     <button onClick={()=>{mydis(changeColor(clr))}}>click</button>
+//     <div style={{width:"500px",height:"300px",background:myclr}}></div>
+//     </>)
+// }
+// export default App
+//==============================================
+
+// import { useState } from "react";
+// import { useSelector, useDispatch } from "react-redux";
+// import { addTask } from "./todo";
+// const App = () => {
+//     const [val, setVal] = useState("");
+//     const mytask = useSelector((state) => state.todo.task)
+//     const mydis = useDispatch();
+//     const taskadd = () => {
+//         mydis(addTask({ id: Date.now(), task: val }))
+//     }
+//     let sno = 0
+//     const ans = mytask.map((key) => {
+//         sno++;
+//         return (
+//             <>
+//                 <tr>
+//                     <td>{sno}</td>
+//                     <td>{key.task}</td>
+//                 </tr>
+//             </>
+//         )
+//     })
+//     return (<>
+//         <h1>to do app</h1>
+//         Enter Task:
+//         <input type="text" value={val} onChange={(e) => { setVal(e.target.value) }} />
+//         <button onClick={taskadd}>add</button>
+//         <hr size="4" color="blue" />
+//         <table>
+//             <tr>
+//                 <th>
+//                     sno
+//                 </th>
+//                 <th>
+//                     task
+//                 </th>
+//             </tr>
+//             {ans}
+//         </table>
+//     </>)
+// }
+// export default App;
